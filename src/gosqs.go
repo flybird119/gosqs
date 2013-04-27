@@ -1,8 +1,8 @@
 package main
 
 import (
-	"./gosqs"
 	"flag"
+	"gosqs"
 	"log"
 	"net/http"
 	_ "net/http/pprof"
