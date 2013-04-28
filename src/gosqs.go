@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"gosqs"
+	"gosqsdb"
 	"log"
 	"net/http"
 	_ "net/http/pprof"
@@ -77,7 +77,7 @@ func Status(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	flag.Parse()
-	runtime.GOMAXPROCS(runtime.NumCPU() - 1)
+	runtime.GOMAXPROCS(runtime.NumCPU())
 	http.HandleFunc("/get", Get)
 	http.HandleFunc("/set", Set)
 	http.HandleFunc("/status", Status)
