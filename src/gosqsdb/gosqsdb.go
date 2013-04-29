@@ -1,4 +1,4 @@
-package gosqs
+package gosqsdb
 
 import (
 	"errors"
